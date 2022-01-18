@@ -1,0 +1,345 @@
+\documentclass{amestyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         MANDATORY PACKAGES                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[polish,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}        % Please use UTF-8 encoding
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{courier}
+\usepackage{tgtermes,newtxtext,newtxmath} % Times fonts
+\usepackage{marvosym} % for graphics (Letter)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         MANDATORY SETTINGS                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\bibsep}{0pt plus 4pt}
+\renewcommand{\bibfont}{\footnotesize}
+\everymath{\displaystyle}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         OPTIONAL PACKAGES                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amsfonts}      % Note: amsmath should go before hyperref
+\usepackage[pdftex]{graphicx}
+\usepackage[pdftex,colorlinks,allcolors=blue]{hyperref}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{lipsum}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%                                                                            %
+%               METADATA TO BE PROVIDED BY AME EDITOR                        %
+%           (Authors should leave this section unaltered)                    %
+%                                                                            %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% \amevolume{66}                  % Volume number
+%% \ameissue{1}                       % Issue number
+%% \ameyear{2019}                     % Year
+%% \ameprintpage{49}                  % First page of the paper in the book
+%% \amedoi{10.24425/ame.2019.12345}  % DOI number
+%% \amereceived{September 09, 2018}   % Date of the manuscript reception
+%% \ameaccepted{February 22, 2019}    % Date of the final version
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%                                                                            %
+%                 METADATA TO BE FILLED IN BY AUTHORS                        %
+%              (Please provide necessary information below)                  %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: Use \title command to provide full title of the paper.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\LaTeX\ template for authors preparing manuscripts to the Archive of
+       Mechanical Engineering}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: Use \shorttitle to customize short title. This title will appear in
+%          running headers and possibly in some other places, where short title
+%          is desirable. Note, that the title used specifically for running
+%          head may also be defined with \headtitle (below).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\shorttitle{Short title of the manuscript}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: \headtitle may be used to customize the title in running headers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \headtitle{Title in running header}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: \author command is provided to define authors' names and
+%          affiliations and identify corresponding author. At the beginning 
+%          corresponding author name and email should be given using 
+%          command \corrauthor. 
+%          Author records should be separated with the \and command. 
+%          Each record should contain at least author's name. Author's
+%          name may be followed with \contact{...} command providing contact
+%          information. If two or more authors have same affiliation, the
+%          affiliation should be defined after the first author's name and then
+%          \contactmark[N] may be used for others authors to refer to the
+%          affiliation record of the previous author. The number N is the
+%          number of the author's affifliation being referred to (see example below).
+%          \orcidid command is optional and the ORCID icon redirects reader to author's
+%          account on orcid.org
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{%
+\corrauthor{Second Author, email:  \email{corresponding@inst.edu}}%
+%special contact to indicate corresponding author - put his/her name here [1]
+  First Author\orcidid{0000-0002-1825-0097}% ORCID number is optional
+    \contact{First Author's Institute, city, country. % [2]
+             Emails: \email{first.author@institute1.edu},\newline % e-mail is optional
+                        \email{third.author@institute1.edu} % e-mail is optional
+                }%
+  \ \ \and
+  Second Author\orcidid{0000-0002-1825-0097}% ORCID number is optional 
+    \contact{Second and Third Author's Institute, city, country.}%
+  \ \ \and
+  Third Author% 
+    \contactmark[2]% this refers to the affiliation [2] above
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: \headauthor should be used to customize author information appearing in
+%          the running headers (to omit the orcid icon connected with authors names).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headauthor{F. Author \and S. Author}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: \keywords should be used to provide a list of key words separated
+%          with comma.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\keywords{First keyword \and second keyword \and third keyword}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           LATEX SETTINGS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectlanguage{english}
+
+
+\begin{document}
+
+\maketitle
+
+\license
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+  \label{abstract}
+  \lipsum[1]
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:intro}
+
+\lipsum[1]
+
+And this paragraph shows how we cite multiple positions at once. The citations
+shall get compressed automatically
+\cite{smith.kowalski:running,%
+      anderson.duan:2000:highly,%
+      arnold:2007:multi,%
+      arveson:2001:spectral:book}.
+Second trial should lead to compressed citations too
+\cite{smith.kowalski:running,%
+      anderson.duan:2000:highly,%
+      andrus:1979:numerical,%
+      arnold:1992:ordinary,%
+      arnold:2007:multi,%
+      arnold.gunther:2001:preconditioned}.
+
+The organization of this paper is following. In section \ref{sec:first} we have
+Lorem Ipsum itemized and enumerated lists. In section \ref{sec:first-first}
+we have equations. In section \ref{sec:first-second} we have table and figures.
+Section \ref{sec:conclusions} concludes the paper.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{First section}
+\label{sec:first}
+
+\lipsum[2]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+  \item Lorem ipsum dolor sit amet,
+  \item vestibulum ut, placerat ac,
+  \item adipiscing vitae, felis.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lipsum[3]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+  \item Lorem ipsum dolor sit amet,
+  \item vestibulum ut, placerat ac,
+  \item adipiscing vitae, felis.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lipsum[4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{First subsection of first section}
+\label{sec:first-first}
+
+\lipsum[5]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation}
+  \mathbf{A} = \begin{bmatrix}
+    \boldsymbol{\lambdaup} & \boldsymbol{\Phi} \\
+    \mathbf{B} & \boldsymbol{\muup}
+  \end{bmatrix}
+  \label{eq:1}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We may always refer the equation \eqref{eq:1} with \verb|\eqref|.
+
+\lipsum[6]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{subequations}
+\label{eq:2}
+\begin{align}
+  a & = b + c \label{eq:2a}
+  \\
+  d & = e + f \label{eq:2b}
+\end{align}
+\end{subequations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lipsum[7]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Second subsection of second section}
+\label{sec:first-second}
+
+\lipsum[8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htbp]
+  \caption{Number of cars produced in the world}
+  \label{tab:1}
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline
+    \multicolumn{1}{|c|}{Year} &
+    \multicolumn{1}{|c|}{Cars produced} \\\hline
+    2009 & 47~772~598 \\
+    2010 & 58~264~852 \\
+    2011 & 59~929~016 \\\hline
+  \end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We can always refer the Table~\ref{tab:1} with \verb|\ref|. Below shall also
+be a~figure. We can always refer the Fig.~\ref{fig:fbar} with \verb|\ref|.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{fbar.pdf}
+  \caption{Four-bar mechanism with all coordinates defined}
+  \label{fig:fbar}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lipsum[10]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[%
+      sibling distance  = 10em,%
+      every node/.style = {%
+        shape=rectangle, rounded corners, draw,%
+        align=center, top color=white,%
+        bottom color=blue!20}]
+    \node {Mechanics}
+      child { node {Kinematics} }
+      child { node {Dynamics} };
+  \end{tikzpicture}
+  \caption{A figure created with TikZ commands}
+  \label{fig:tikz}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lipsum[11]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{fbar.pdf}
+    \caption{Initial position}
+    \label{fig:fbar2a}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{fbar.pdf}
+    \caption{Final position}
+    \label{fig:fbar2b}
+  \end{subfigure}
+  \caption{Four bar in its Initial and Final position}
+  \label{fig:fbar2}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+\label{sec:conclusions}
+
+\lipsum[12]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             APPENDICES                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{appendix}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \section{Appendix A}
+  \label{sec:appendix-a}
+  \lipsum[1]
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \section{Appendix B}
+  \label{sec:appendix-b}
+  \lipsum[2]
+\end{appendix}
+
+\begin{acknowledgements}
+  Thank you, thank you, thank you. Thank you, thank you, thank you. Thank you,
+  thank you, thank you.  Thank you, thank you, thank you. Thank you, thank you,
+  thank you. Thank you, thank you, thank you. Thank you, thank you, thank you.
+  Thank you, thank you, thank you.
+\end{acknowledgements}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      LEAVE THE FOLLOWING LINES UNALTERED                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{receiptnote}
+  Manuscript received by Editorial Board, \theamereceived; \\
+  final version, \theameaccepted.
+\end{receiptnote}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             REFERENCES                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{unsrt}
+\bibliography{References}
+
+
+\end{document}
+% vim: set spell expandtab tabstop=2 shiftwidth=2 syntax=tex ff=unix:
