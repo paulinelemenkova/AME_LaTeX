@@ -1,0 +1,348 @@
+\documentclass{amestyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         MANDATORY PACKAGES                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[polish,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}        % Please use UTF-8 encoding
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{courier}
+\usepackage{tgtermes,newtxtext,newtxmath} % Times fonts
+\usepackage{marvosym} % for graphics (Letter)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         MANDATORY SETTINGS                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\bibsep}{0pt plus 4pt}
+\renewcommand{\bibfont}{\footnotesize}
+\everymath{\displaystyle}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         OPTIONAL PACKAGES                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amsfonts}      % Note: amsmath should go before hyperref
+\usepackage[pdftex]{graphicx}
+\usepackage[pdftex,colorlinks,allcolors=blue]{hyperref}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{lipsum}
+\usepackage{float}
+
+\graphicspath{{figures/}} % path to folder with figures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%                                                                            %
+%               METADATA TO BE PROVIDED BY AME EDITOR                        %
+%           (Authors should leave this section unaltered)                    %
+%                                                                            %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% \amevolume{66}                  % Volume number
+%% \ameissue{1}                       % Issue number
+%% \ameyear{2019}                     % Year
+%% \ameprintpage{49}                  % First page of the paper in the book
+%% \amedoi{10.24425/ame.2019.12345}  % DOI number
+%% \amereceived{September 09, 2018}   % Date of the manuscript reception
+%% \ameaccepted{February 22, 2019}    % Date of the final version
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%                                                                            %
+%                 METADATA TO BE FILLED IN BY AUTHORS                        %
+%              (Please provide necessary information below)                  %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: Use \title command to provide full title of the paper.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\LaTeX\ template for authors preparing manuscripts to the Archive of
+       Mechanical Engineering}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: Use \shorttitle to customize short title. This title will appear in
+%          running headers and possibly in some other places, where short title
+%          is desirable. Note, that the title used specifically for running
+%          head may also be defined with \headtitle (below).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\shorttitle{Short title of the manuscript}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: \headtitle may be used to customize the title in running headers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \headtitle{Title in running header}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: \author command is provided to define authors' names and
+%          affiliations and identify corresponding author. At the beginning 
+%          corresponding author name and email should be given using 
+%          command \corrauthor. 
+%          Author records should be separated with the \and command. 
+%          Each record should contain at least author's name. Author's
+%          name may be followed with \contact{...} command providing contact
+%          information. If two or more authors have same affiliation, the
+%          affiliation should be defined after the first author's name and then
+%          \contactmark[N] may be used for others authors to refer to the
+%          affiliation record of the previous author. The number N is the
+%          number of the author's affifliation being referred to (see example below).
+%          \orcidid command is optional and the ORCID icon redirects reader to author's
+%          account on orcid.org
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{%
+\corrauthor{Per Lindh, email:  \email{per.a.lindh@gmail.com}}%
+%special contact to indicate corresponding author - put his/her name here [1]
+  Per Lindh\orcidid{0000-0002-0577-9936}% ORCID number is optional
+    \contact{Swedish Transport Administration, Gibraltargatan 7, Malmö, Sweden.
+                } 
+     \contact{Lund University, Division of Building Materials, Box 118, SE-221-00, Lund, Sweden.
+                }
+  \ \ \and
+  Polina Lemenkova\orcidid{0000-0002-5759-1089}% ORCID number is optional 
+    \contact{Université Libre de Bruxelles. École polytechnique de Bruxelles (Brussels Faculty of Engineering),
+Laboratory of Image Synthesis and Analysis, Bld. L, Campus de Solbosch, Avenue Franklin Roosevelt 50, Brussels 1000, Belgium.  Email: \email{polina.lemenkova@ulb.be}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: \headauthor should be used to customize author information appearing in
+%          the running headers (to omit the orcid icon connected with authors names).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headauthor{P. Lindh \and P. Lemenkova}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: \keywords should be used to provide a list of key words separated
+%          with comma.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\keywords{First keyword \and second keyword \and third keyword}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           LATEX SETTINGS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectlanguage{english}
+
+
+\begin{document}
+
+\maketitle
+
+\license
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+  \label{abstract}
+  \lipsum[1]
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:intro}
+
+\lipsum[1]
+
+And this paragraph shows how we cite multiple positions at once. The citations
+shall get compressed automatically
+\cite{smith.kowalski:running,%
+      anderson.duan:2000:highly,%
+      arnold:2007:multi,%
+      arveson:2001:spectral:book}.
+Second trial should lead to compressed citations too
+\cite{smith.kowalski:running,%
+      anderson.duan:2000:highly,%
+      andrus:1979:numerical,%
+      arnold:1992:ordinary,%
+      arnold:2007:multi,%
+      arnold.gunther:2001:preconditioned}.
+
+The organization of this paper is following. In section \ref{sec:first} we have
+Lorem Ipsum itemized and enumerated lists. In section \ref{sec:first-first}
+we have equations. In section \ref{sec:first-second} we have table and figures.
+Section \ref{sec:conclusions} concludes the paper.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{First section}
+\label{sec:first}
+
+\lipsum[2]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+  \item Lorem ipsum dolor sit amet,
+  \item vestibulum ut, placerat ac,
+  \item adipiscing vitae, felis.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lipsum[3]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+  \item Lorem ipsum dolor sit amet,
+  \item vestibulum ut, placerat ac,
+  \item adipiscing vitae, felis.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lipsum[4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{First subsection of first section}
+\label{sec:first-first}
+
+\lipsum[5]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Second subsection of second section}
+\label{sec:first-second}
+
+\lipsum[8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htbp]
+  \caption{Number of cars produced in the world}
+  \label{tab:1}
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline
+    \multicolumn{1}{|c|}{Year} &
+    \multicolumn{1}{|c|}{Cars produced} \\\hline
+    2009 & 47~772~598 \\
+    2010 & 58~264~852 \\
+    2011 & 59~929~016 \\\hline
+  \end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We can always refer the Table~\ref{tab:1} with \verb|\ref|. Below shall also
+be a~figure. We can always refer the Fig.~\ref{fig:fbar} with \verb|\ref|.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Fig_01}
+  \caption{Four-bar mechanism with all coordinates defined}
+  \label{fig:fbar}
+\end{figure}
+
+\subsection{Grain distribution}
+
+On the aggregate sample, a grain distribution analysis was performed, see Figure 12, cf. Appendix 1. The sample consists predominantly of silt. A fairly large proportion of fibers was also present in the sample, see Figure 13. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Fig_12}
+  \caption{Grain distribution diagram for aggregate sample B6b.}
+  \label{fig:fbar}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Fig_13}
+  \caption{Photo showing dried material after washing sieving. Note the amount of fiber at the top of the image. Photo By Lindh.}
+  \label{fig:fbar}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lipsum[10]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{Fig_03}
+    \caption{Initial position}
+    \label{fig:fbar2a}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{Fig_04}
+    \caption{Final position}
+    \label{fig:fbar2b}
+  \end{subfigure}
+  \caption{Four bar in its Initial and Final position}
+  \label{fig:fbar2}
+\end{figure}
+
+\subsection{Measurement of permeability}
+As in the lab study, the permeability tests were performed according to the cell pressure permeate method (SGI method, edition 15). Within each group, the permeability decreases with increasing amount of binder, see Figure 1. The test is performed with double samples and the spread within each group seems to decrease with increasing amount of binder. 
+
+The permeability tests were performed according to the cell pressure permeate method (SGI method edition 15). The specimens tested in phase 1 came from the worst-case scenario, ie high water ratio and low amount of binder. Despite this, the results showed low to very low permeability, see Figure 23. Samples with an increased slag content gave a denser material. However, the quality requirement of 10-8 m/s was only achieved with 30\% of cement and 70\% of slag. Only samples from the $H_WL_B$ series were included in the experiments 
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{Fig_23a}
+    \caption{Initial position}
+    \label{fig:fbar2a}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{Fig_23b}
+    \caption{ }
+    \label{fig:xx2b}
+  \end{subfigure}
+  \caption{Four bar in its Initial and Final position}
+  \label{fig:xx2b}
+\end{figure}
+
+Results from the permeability tests for the different materials and different binder levels. Duplicate experiments are performed on all samples. The spread within each recipe seems to decrease with reduced permeability, Figure \ref{fig:xx2b}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Fig_24}
+  \caption{Four-bar mechanism with all coordinates defined}
+  \label{fig:24}
+\end{figure}
+
+Graph in Figure \ref{fig:24} showing a 2D response area for the permeability tests performed in Phase 2. The results show a strong negative interaction between binder content and water ratio. At a high water ratio and a low amount of binder, the permeability increases by the order of ten powers. All tests are performed as double tests. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Fig_25}
+  \caption{Four-bar mechanism with all coordinates defined}
+  \label{fig:25}
+\end{figure}
+
+Graph in Figure \ref{fig:25} shows a 3D response area for the permeability tests performed in Phase 2. The results show a strong negative interaction between binder content and water ratio. At a high water ratio and a low amount of binder, the permeability increases by the order of ten powers. All tests are performed as double tests.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+\label{sec:conclusions}
+
+\lipsum[12]
+
+\begin{acknowledgements}
+  The project has been supported by the Swedish Geotechnical Institute (SGI) and technical assistance of Annika Åberg.
+\end{acknowledgements}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      LEAVE THE FOLLOWING LINES UNALTERED                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{receiptnote}
+  Manuscript received by Editorial Board, \theamereceived; \\
+  final version, \theameaccepted.
+\end{receiptnote}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             REFERENCES                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{unsrt}
+\bibliography{References}
+
+
+\end{document}
+% vim: set spell expandtab tabstop=2 shiftwidth=2 syntax=tex ff=unix:
