@@ -6,8 +6,8 @@
 \usepackage[polish,english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}        % Please use UTF-8 encoding
-\usepackage[numbers,sort&compress]{natbib}
-
+\usepackage{url}
+\usepackage[numbers,sort&compress,comma]{natbib}
 \usepackage{courier}
 \usepackage{tgtermes,newtxtext,newtxmath} % Times fonts
 \usepackage{marvosym} % for graphics (Letter)
@@ -27,7 +27,7 @@
 \usepackage{amsmath,amsfonts}      % Note: amsmath should go before hyperref
 \usepackage[pdftex]{graphicx}
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
-\usepackage[pdftex,colorlinks,allcolors=blue]{hyperref}
+\usepackage[pdftex,colorlinks,allcolors=blue,hidelinks=true,bookmarks=true,hyperindex,breaklinks]{hyperref}
 	\hypersetup{bookmarksdepth=paragraph,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
 \usepackage{listings}
 \usepackage{tikz}
@@ -51,7 +51,7 @@
 %% \ameyear{2019}                     % Year
 %% \ameprintpage{49}                  % First page of the paper in the book
 %% \amedoi{10.24425/ame.2019.12345}  % DOI number
-%% \amereceived{September 09, 2018}   % Date of the manuscript reception
+\amereceived{February 21, 2022}   % Date of the manuscript reception
 %% \ameaccepted{February 22, 2019}    % Date of the final version
 
 \title{Permeability, compressive strength and Proctor parameters of silts stabilised by hybrid Portland cement and ground-granulated blast furnace slag (GGBFS)}
@@ -119,13 +119,15 @@ The study investigates the effect of Portland cement and ground-granulated blast
 \label{sec:intro}
 
 \subsection{Background} 
-The fundamental structure of soil includes important morphometric parameters, such as size, shape and aggregation of granules, size and density of pores and arrangement of elements within the soil mass. In turn, these largely influence its physical and mechanical properties, as reported in previous studies: strength \cite{5775686}, compactness \cite{5774579,9082607,WANG2022100703}, cohesion \cite{Deviren,KIM2021106163}, penetration resistance, permeability \cite{GAO2022100754,CHOONG2022107075}, air-filled porosity \cite{POHL2021115124,ZHANG2021105738,ZIEGLERRIVERA2021103194} and gas diffusivity \cite{Ball}. These parameters are crucial for construction industry, as strength of soil can significantly affect stability, durability and safety of  engineering structures: roads, pavements and buildings \cite{747690,6802685,KULKARNI2022125363,ZHANG2020119293,OBIANYO2020120677,BAKAIYANG2021e00626,HAN20181187,KAMAL20212660,WANG2022100703}.
+The fundamental structure of soil includes important morphometric parameters, such as size, shape and aggregation of granules, size and density of pores and arrangement of elements within the soil mass. In turn, these largely influence its physical and mechanical properties, as reported in previous studies: strength \cite{5775686}, compactness \cite{5774579,9082607,WANG2022100703}, cohesion \cite{Deviren,KIM2021106163}, penetration resistance, permeability \cite{GAO2022100754,CHOONG2022107075}, air-filled porosity \cite{POHL2021115124,ZHANG2021105738,ZIEGLERRIVERA2021103194} and gas diffusivity \cite{Ball}. These parameters are crucial for construction industry, as strength of soil affects stability, durability and safety of structures: roads, pavements and buildings \cite{747690,6802685,KULKARNI2022125363,ZHANG2020119293,WANG2022100703}.
 
 The performance of soil properties over time with changing external loads, treatment chemical agents or varying environmental conditions, such as temperature or humidity, can be evaluated through a series of practical experiments. These include, among others, measurement of strength, porosity, compactness and permeability that can be evaluated using various geotechnical devices and existing practical workflow manuals \cite{Day2001,Davis2008}. For instance, because soil is a complex structure consisting of solid particles and voids filled with water and air, its compactness and porosity can be assessed by evaluating water content and dry density \cite{Hillel}. 
 
-The correlations between hydraulic, physical and mechanical properties of soil can be found by quantifying water content in its pore structure, which is possible by measuring soil permeability \cite{BARBOSA2022115673}. Practical engineerings testing of soil is a key procedure for evaluating its bearing capacity in order to ensure safety of the infrastructure (roads, pavements and buildings), avoid possible damages and human losses in the worst cases. Therefore, evaluating soil parameters has a final goal of assessment its strength prior to earthworks, because safety of infrastructure is largely influenced by soil compressibility as much as by strength.
+The correlations between hydraulic, physical and mechanical properties of soil can be found by quantifying water content in its pore structure, which is possible by measuring soil permeability \cite{BARBOSA2022115673}. Practical engineerings testing of soil is a key procedure for evaluating its bearing capacity in order to ensure safety of the infrastructure and avoid possible damages \cite{OBIANYO2020120677,BAKAIYANG2021e00626,HAN20181187,KAMAL20212660}. 
 
-Physical and mechanical properties of soil should be tested and improved if necessary before the earthworks, in order to increase its strength and bearing capacity. This is often a case for weak and compressible soils, such as silt and clays, usually located in the coastal areas. The improvement of properties and behaviour of soils is usually performed through the stabilization and solidification (S/S) process that consists in treatment of soil mass using the stabilising agents. The procedure of soil stabilisation is developed, tested and evaluated in many reports on civil engineering and described in the existing studies \cite{Jauberthie,Lindh202102,ArabiWild,Lindh2004}. They described the improvement of compression characteristics of soil, required prior to construction or civil objects, e.g. roads, pavements or buildings. Since damages or cracks in weak soil may affect human lives, the importance of soil testing becomes clear. 
+Evaluating soil parameters has a goal of assessment its strength prior to the earthworks, because safety of infrastructure is largely influenced by soil compressibility as much as by compressive strength. Therefore, physical and mechanical properties of soil should be tested and improved if necessary before the earthworks, in order to increase its strength and bearing capacity. This is often a case for weak compressible soils, such as silt and clays, usually located in coastal areas. 
+
+The improvement of properties and behaviour of weak soil is performed through the stabilization and solidification (S/S) process that consists in treatment of soil mass using the stabilising agents. The procedure of soil stabilisation is developed, tested and evaluated in many reports on civil engineering and described in the existing studies \cite{Jauberthie,Lindh202102,ArabiWild,Lindh2004}. They described the improvement of compression characteristics of soil, required prior to construction or civil objects, e.g. roads, pavements or buildings. As damages or cracks in weak soil may affect human lives, the importance of soil testing is clear. 
 
 The process of soil stabilisation consists in adding stabilising agents, or binders, into the soil mass. The impact of admixtures on soil strength depends on a variety of factors, among which soil type is one of the primary ones. For instance, properties of silt and clayey soil can be significantly improved by adding Portland cement or slag into the soil mass. Another factor includes curing time: in general, the compression of soil increases over time \cite{Lindh202102}. Finally, type and amount of binder used for stabilization notably affects the quality of the stabilized soil. 
 
@@ -133,7 +135,7 @@ The most common stabilising agents are cement \cite{Rekik}, cementitious product
 
 Soil compactness, permeability and compressive strength are important technical properties measured during the S/S procedure prior to construction works \cite{LindhWinter,XU2021114774}. Extensive literature is available on the S/S of soil and measuring its properties including soil types, testing methods and reported results \cite{Anagnostopoulos,Kallenetal2016,Lemenkov2021a,HUANG2022115452}. Comparatively fewer studies focused on soil compaction and the impact of binder ratios on stabilization, permeability and compressibility of soils \cite{Kongkitkul,Leeetal2007}. Soil compaction is commonly resorted in a weak clay soil aimed to improve its compactness and density by reducing void space, \emph{i.e.}, the amount of air between the soil granules. Hence, the evaluation of soil compactness is related to the measurement of shape indices of pores and solid phase elements along with physical parameters \cite{Bryk}. The importance of compaction of clayey soil consists in its applicability as a frequently used material in the construction industry. This is due to physical and mechanical properties of compacted clays which usually stay in an unsaturated condition \cite{Zou}. 
 
-The Proctor compaction test is a commonly used technique for measuring soil compactness. It has advantages in approach and robustness of the workflow, as described earlier \cite{Wasman,Matteo,Boudlal}. Its applications are diverse in earthworks, geotechnical engineering and agricultural sciences. Proctor test has long been used to assess safety and bearing capacity of roads, pavements and building foundations using evaluation of the heterogeneous subgrade \cite{Barden,Jibon}. Moreover, studies on horticultural production and forest management also applied Proctor test to assess soil compactness, which is an increasingly challenging problem in agriculture \cite{ARAGON2000197,Bayat,Nhantumbo,ALAOUI20111}. 
+The Proctor compaction test is a commonly used technique for measuring soil compactness. It has advantages in approach and robustness of the workflow, as described earlier \cite{Wasman,Matteo,Boudlal}. Its applications are diverse in earthworks, geotechnical engineering and agriculture. Proctor test has long been used to assess safety and bearing capacity of roads, pavements and building foundations using evaluation of the heterogeneous subgrade \cite{Barden,Jibon}. Moreover, studies on horticultural production and forest management also applied Proctor test to assess soil compactness, which is an increasingly challenging problem in agriculture \cite{ARAGON2000197,Bayat,Nhantumbo,ALAOUI20111}. 
 
 Besides Proctor test, existing methods are developed to standardise the procedure of compaction tests in a laboratory \cite{ASTM2007,ASTM2009}. These are used to determine the relationship between the molding water content and dry unit weight of soils. Other examples of testing soil compactness include, \emph{i.a.}, gyratory compactor \cite{Leeetal2007}, vibrating compaction, modified Proctor compaction on the stress-strain characteristics and shear strength \cite{Long}. Using Time Domain Reflectrometry (TDR) and oedometer is reported to measure soil moisture by testing texture and macropores after vertical compression of a compacted soil \cite{Alaoui}. The Soil Classification System developed by the American Association of State Highway and Transportation Officials (AASHTO) is used in existing studies for soil quality assessment for highway construction industry. For example, the AASHTO prediction method is tested for measuring density and optimum moisture content of a soil sample \cite{Livneh}. 
 
@@ -420,6 +422,7 @@ Present study demonstrated that stiffness and durability of the soil-binder syst
 %\bibliographystyle{unsrt}
 %\bibliographystyle{unsrtnat}
 \bibliographystyle{plainnat}
+%\bibliographystyle{apalike}
 %\bibliographystyle{abbrvnat}
 \bibliography{References_AME}
 %\nocite{*}
