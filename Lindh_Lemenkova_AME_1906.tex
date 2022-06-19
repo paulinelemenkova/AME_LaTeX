@@ -1,0 +1,403 @@
+\documentclass{amestyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         MANDATORY PACKAGES                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[polish,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}        % Please use UTF-8 encoding
+\usepackage{url}
+\usepackage[numbers,sort&compress,comma]{natbib}
+\usepackage{courier}
+\usepackage{tgtermes,newtxtext,newtxmath} % Times fonts
+\usepackage{marvosym} % for graphics (Letter)
+\usepackage{soul}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         MANDATORY SETTINGS                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\bibsep}{0pt plus 4pt}
+\renewcommand{\bibfont}{\footnotesize}
+\everymath{\displaystyle}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         OPTIONAL PACKAGES                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amsfonts}      % Note: amsmath should go before hyperref
+\usepackage[pdftex]{graphicx}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage[pdftex,colorlinks,allcolors=blue,hidelinks=true,bookmarks=true,hyperindex,breaklinks]{hyperref}
+	\hypersetup{bookmarksdepth=paragraph,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{lipsum}
+\usepackage{float}
+
+\graphicspath{{figures/}} % path to folder with figures
+
+\usepackage{soul} % for highlighting
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%                                                                            %
+%               METADATA TO BE PROVIDED BY AME EDITOR                        %
+%           (Authors should leave this section unaltered)                    %
+%                                                                            %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% \amevolume{66}                  % Volume number
+%% \ameissue{1}                       % Issue number
+%% \ameyear{2019}                     % Year
+%% \ameprintpage{49}                  % First page of the paper in the book
+%% \amedoi{10.24425/ame.2019.12345}  % DOI number
+\amereceived{February 21, 2022}   % Date of the manuscript reception
+%% \ameaccepted{February 22, 2019}    % Date of the final version
+
+\title{Permeability, compressive strength and Proctor parameters of silts stabilised by Portland cement and ground granulated blast furnace slag (GGBFS)}
+
+\shorttitle{Permeability, UCS and Proctor parameters of stabilised silts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: \headtitle may be used to customize the title in running headers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \headtitle{Title in running header}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHORS: \author command is provided to define authors' names and
+%          affiliations and identify corresponding author. At the beginning 
+%          corresponding author name and email should be given using 
+%          command \corrauthor. 
+%          Author records should be separated with the \and command. 
+%          Each record should contain at least author's name. Author's
+%          name may be followed with \contact{...} command providing contact
+%          information. If two or more authors have same affiliation, the
+%          affiliation should be defined after the first author's name and then
+%          \contactmark[N] may be used for others authors to refer to the
+%          affiliation record of the previous author. The number N is the
+%          number of the author's affifliation being referred to (see example below).
+%          \orcidid command is optional and the ORCID icon redirects reader to author's
+%          account on orcid.org
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{%
+\corrauthor{Per Lindh, email:  \email{per.a.lindh@gmail.com}}%
+%special contact to indicate corresponding author - put his/her name here [1]
+  Per Lindh\orcidid{0000-0002-0577-9936}% ORCID number is optional
+    \contact{Swedish Transport Administration, Gibraltargatan 7, Malmö, Sweden.
+                } 
+     \contact{Lund University, Division of Building Materials, Box 118, SE-221-00, Lund, Sweden.
+                }
+  \ \ \and
+  Polina Lemenkova\orcidid{0000-0002-5759-1089}% ORCID number is optional 
+    \contact{Université Libre de Bruxelles, École polytechnique de Bruxelles (EPB, Brussels Faculty of Engineering),
+Laboratory of Image Synthesis and Analysis, Bld. L, Campus de Solbosch CP131/3, Avenue Franklin D. Roosevelt 50, B-1050 Brussels, Belgium.  Email: \email{polina.lemenkova@ulb.be}}
+}
+
+\headauthor{P. Lindh \and P. Lemenkova}
+
+\keywords{Permeability \and porosity \and compactness \and compressive strength \and cement}
+
+\selectlanguage{english}
+
+\begin{document}
+
+\maketitle
+
+\license
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+\label{abstract}
+
+The study investigates the effect of Portland cement and ground granulated blast furnace slag (GGBFS) added in changed proportions as stabilising agents on soil parameters: uniaxial compressive strength (UCS), Proctor compactness and permeability. The material included dredged clayey silts collected from the coasts of Timrå, Östrand. Soil samples were treated by different ratio of the stabilising agents and water and tested for properties. Study aimed to estimate variations of permeability, UCS and compaction of soil by changed ratio of binders. Permeability tests were performed on soil with varied stabilising agents in ratio $H_WL_B$ (high water / low binder) with ratio 70/30\%, 50/50\%, and 30/70\%. The highest level of permeability was achieved by ratio 70/30\% of cement/slag, while the lowest -- by 30/70\%. Proctor compaction was assessed on a mixture of ash and green liquor sludge, to determine optimal moisture content for the most dense soil. The maximal dry density at 1,12 $g/cm^3$ was obtained by 38.75 \% of water in a binder. Shear strength and P-wave velocity were measured using ISO/TS17892-7 and visualised as a function of UCS. The results showed varying permeability and UCS of soil stabilised by changed ratio of CEM II/GGBS.
+	
+\end{abstract} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %\cite{}.
+
+\newpage
+\section{Introduction} 
+\label{sec:intro}
+
+\subsection{Background} 
+The fundamental structure of soil includes important morphometric parameters, such as size, shape and aggregation of granules, size and density of pores and arrangement of elements within the soil mass. In turn, these largely influence its physical and mechanical properties, as reported in previous studies: strength \cite{5775686}, compactness \cite{5774579,9082607,WANG2022100703}, penetration resistance, permeability \cite{GAO2022100754,CHOONG2022107075}, air-filled porosity \cite{POHL2021115124,ZHANG2021105738,ZIEGLERRIVERA2021103194} and gas diffusivity \cite{Ball}. \hl{Besides, the cohesion} \cite{Deviren,KIM2021106163} \hl{and friction angle of soil} \cite{MARZULLI2021813,ZOU20191,KAYA2009252} \hl{are important parameters that affect affects slope stability through anisotropy of the shear strength} \cite{WANG20161055,STOCKTON201931} \hl{and have a notable effect on the effective stress and the dynamic pore pressure in soil} \cite{YE2012111}. {Thus, these} soil parameters are crucial for construction industry \hl{when evaluating stability and deformation of geotechnical structures}, as soil strength affects stability, durability and safety of structures \cite{747690,6802685,KULKARNI2022125363,ZHANG2020119293,WANG2022100703}. 
+
+The performance of soil properties over time with changing external loads, treatment chemical agents or varying environmental conditions, such as temperature or humidity, can be evaluated through a series of practical experiments. These include, among others, measurement of strength, porosity, compactness and permeability that can be evaluated using various geotechnical devices and existing practical workflow manuals \cite{Day2001,Davis2008}. For instance, because soil is a complex structure consisting of solid particles and voids filled with water \hl{and/or} air, its compactness and porosity can be assessed by evaluating water content and dry density \cite{Hillel}. The correlations between hydraulic, physical and mechanical properties of soil can be found by quantifying water content in its pore structure, which is possible by measuring soil permeability \cite{BARBOSA2022115673}. Practical engineerings testing of soil is a key procedure for evaluating its bearing capacity in order to ensure safety of the infrastructure and avoid possible damages \cite{OBIANYO2020120677,BAKAIYANG2021e00626,HAN20181187,KAMAL20212660}. 
+
+Evaluating soil parameters has a goal of assessment its strength prior to the earthworks, because safety of infrastructure is largely influenced by soil compressibility as much as by compressive strength. Therefore, physical and mechanical properties of soil should be tested and improved \hl{in order} to increase \hl{strength} and bearing capacity. This is often a case for weak compressible soils, such as silt and clays\hl{. }The improvement of properties and behaviour of weak soil is performed through the stabilization and solidification (S/S). The procedure of soil stabilisation is developed \hl{and} evaluated in many reports on civil engineering \cite{Jauberthie,Lindh202102,ArabiWild,Lindh2004}. They described the improvement of compression characteristics of soil, required prior to construction or civil objects\hl{. The stabilisation improves stiffness and durability of the soil-binder system because the initial natural voids and pores of the raw soil structure become filled by binders that increase the soil strength}. As damages or cracks in weak soil may \hl{affect }lives, the importance of soil testing is clear. 
+
+The process of soil stabilisation consists in adding stabilising agents, or binders, into the soil mass. The impact of admixtures on soil strength depends on a variety of factors, among which soil type is one of the primary ones. \hl{Curing conditions are key factors in soil stabilisation which aims to to increase its strength through mixing up soil with binding agents} \cite{LiuStarcher,Oliveiraetal2012,Ghasemzadeh}. \hl{Temperature and time are the most important curing parameters which have a strong effect on soil strength development} \cite{Aldaood,Yuetal2017,Oh}. \hl{In general, the unconfined compressive strength of the stabilised soil increases along with curing time, as noted earlier in previous works} \cite{Howard,Lindh202102,Consoli}. \hl{Other parameters include curing stress, confining pressure, content and combination of cement/admixture, proportions of water/binder ratio, soil types, porosity and organic matter content} \cite{Rabbi,CHAIYAPUT2022e01082,Lindh2022,AMADI2018305}. \hl{Besides, changing rate of continued hydration process and elevated moisture results in binding of cementitious products between the adjacent soil particles in course of curing which increases to soil strength. For example, strength and modulus of soil increase along with curing time and temperature, as well as ratio of cement in a binder mixture} \cite{Wangetal2017}. 
+
+\hl{The} type and amount of binder \hl{strongly} affect \hl{the} strength of the stabilized soil. The most common stabilising agents are cement \cite{Rekik}, cementitious products, such as fly ash \cite{Tastan,Hasan}, cement kiln dust \cite{Solanki,Lindh2021a}, lime \cite{ARULRAJAH2017999,BIAN20211124,ANDAVAN20201125,INDIRAMMA2020694}. The by-products of the industrial processes or iron and steel-making, such as ground granulated blast furnace slag (GGBFS) \cite{Mozejko} and sludge \cite{Ingunza,Sharif} can also be used as binders. Besides the type of binders, the process of soil stabilization includes practical estimation and determining the amount and ratio proportions of admixtures in tested soil samples, which also affects its compressive strength and microstructure \cite{Lindh2001,Ahmed}.
+
+Soil compactness, permeability and compressive strength are important technical properties measured during the S/S procedure prior to construction works \cite{LindhWinter,XU2021114774}. Extensive literature is available on the S/S of soil and measuring its properties including soil types, testing methods and reported results \cite{Anagnostopoulos,Kallenetal2016,Lemenkov2021a,HUANG2022115452}. \hl{Fewer} studies focused on soil compaction and the impact of binder ratio on stabilization, permeability and compressibility\hl{ }\cite{Kongkitkul,Leeetal2007}. Soil compaction is \hl{resorted} in a weak clay \hl{aimed} to improve its compactness and density by reducing void space, \emph{i.e.}, the amount of air between the \hl{granules}. Hence, the evaluation of soil compactness is related to the measurement of shape indices of pores and solid phase elements \cite{Bryk}. The importance of compaction of clayey soil consists in its applicability as a frequently used material in construction industry\hl{ }due to physical and mechanical properties of compacted clays \cite{Zou}. 
+
+The Proctor compaction test is a commonly used technique for measuring soil compactness \hl{aimed to assess safety and bearing capacity of roads, pavements and building foundations}. It has advantages in \hl{the} approach and robustness of the workflow\hl{ }\cite{Wasman,Matteo,Boudlal}. Its applications \hl{include} geotechnical engineering \cite{Barden,Jibon} and agriculture \cite{ARAGON2000197,Bayat,Nhantumbo,ALAOUI20111}. Besides Proctor test, existing methods are developed to standardise the procedure of compaction tests\hl{ }\cite{ASTM2007,ASTM2009}. These are used to determine the relationship between the molding water content and dry unit weight of soils. Other examples of testing soil compactness include\hl{ }gyratory compactor \cite{Leeetal2007}, vibrating compaction, modified Proctor compaction on the stress-strain characteristics and shear strength \cite{Long} \hl{or using} oedometer for testing texture and macropores after\hl{ }compression of \hl{the} compacted soil \cite{Alaoui}. The Soil Classification System developed by the American Association of State Highway and Transportation Officials (AASHTO) is used\hl{ }for soil quality assessment \hl{in} highway construction industry. For example, \hl{it} is tested for measuring density and\hl{ }moisture content of\hl{ }soil \cite{Livneh}. 
+
+\hl{Since soil has a permeable structure due to the voids in pores, testing soil permeability is required for a variety of geotechnical works, e.g., analysis of seepage, dewatering, evaluating possible water flow through soil. The tests on soil specimens are used to measure soil permeability, using laboratory approaches} \cite{ELHAKIM20162631} \hl{or in the field using borehole tests} \cite{YU2022127817}, \hl{by \emph{in-situ} field measurements} \cite{ZHOU201999}\hl{, e.g., using piezocone penetration and dissipation tests} \cite{TAKAI2016277,LIM2019189}. \hl{A more straightforward and theoretical approach is a numerical modelling of the pore structures of soil aimed to compute the coefficient of permeability based on the laboratory evaluations of soil samples, such as the grain size distribution} \cite{LIU2021104468}.
+
+\hl{The compressive strength of stabilised soil is measured by the unconfined compression test, a standard approach widely used in various geotechnical engineering applications} \cite{SHIBI20211123,KARDANI2021100591}. \hl{The advantages of this method include the reliability and robustness of the approach, fast workflow process and affordable measurement equipment. Testing compressive strength is applicable to saturated, cohesive, fine-grained soil samples} \cite{MOUSAVI2021104890,AHMED201527}. \hl{The idea behind the compressive strength testing is to control strain of soil samples through changes in pores of the soil sample under pressure. This method enables to obtain an estimate of the soil strength and to determine its applicability for effective and safe construction. The compressibility and strength of soil are a basic frame for the interpretation of the characteristics and suitability of soil. The physical and mechanical properties of soil depend on its inherent natural structure}, \emph{i.e.}, fabric and bonding characteristics \cite{Burland}. \hl{Binders react with water and show a bonding effect that contributes to the increase of the compressive strength of soil. Soil stabilisation results in its higher strength.}
+
+%\newpage
+\subsection{Study objectives} 
+The \hl{present} study examines physical and mechanical properties of \hl{soil:} compression \hl{strength}, permeability and compactness. The specimens were collected in a test site located in Timrå municipality, Östrand area of Bothnian Bay, Sweden, Figure \ref{fig:01}. The soil type \hl{mostly included} loamy silts, followed by sand and gravel. The study \hl{goal is} to \hl{evaluate the compressive strength, permeability and compaction of the stabilised} soil prepared for \hl{the} construction works. The specific objectives of this study include the following tasks:
+
+\begin{enumerate}
+   \item to analyse grain size distribution;
+   \item to determine values of the UCS for each mixture of soil samples stabilised by various binder/water ratio (low/high) and stabilising agents (cement/slag): 70/30\%, 50/50\%, 30/70\%; 
+  \item to assess soil permeability through a series of the duplicate tests performed for different soil/binder proportions ($H_WL_B,L_WH_B,L_WEL_B$) with cement/slag for high-low soil and binder ratios\hl{;}
+  \item to perform Proctor compaction test and \hl{visualise} soil curves \hl{to} evaluate the degree of maximum moisture content at which soil is the most dense and achieves maximum dry density;
+  \item to find a correlation between the ultrasonic P-waves velocities and the UCS of soil with various amount of binder (120 and 150 $kg/m^3$);
+  \item to observe the variability in values of the P-wave velocity for soil \hl{taken} from sample sites A4 and B4 and stabilised by various amount of binder, and to statistically visualise the difference on the histograms;
+  \item to compare changes in the P-wave velocity with values of the UCS for all \hl{samples} from various phases of the experiment and binder ratios and to visualise them on a graph.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Fig_01}
+  \caption{Study area: coastal area of Timrå municipality, Bothnian Bay, Baltic Sea\hl{. }Numbers (A1--A8, B1--B24) indicate position for taking sites where sediment samples were collected and groundwater samples taken. Figure source: SCA Biorefinery Östrand AB.}
+  \label{fig:01}
+\end{figure}
+
+Existing \hl{works} in civil engineering and geotechnical testing of \hl{soil} mostly focus \hl{on} the \hl{effectiveness of various} types of binder as a stabilising agent, \hl{e.g.,} lime \cite{Rao,Mukhtar,Swaidani}, fly ash \cite{Phetchuay}. Others reported testing \hl{soil }types: such as frozen soils \cite{Lemenkov2021b,Lemenkov2021c}, sand soil \cite{Robertson}, clay or silt \cite{Komal}. Some \hl{works} discuss technical issues of data processing \cite{Kaellenetal2014,Lemenkov2021c}. \hl{In} this study \hl{we} evaluated the \hl{effects} of varying \hl{ratio} of \hl{binders} assessed as a two-factor experiment. \hl{We} analysed the ratio of the binder/water content in a soil mass \hl{to} find the optimal \hl{admixture} proportions to increase \hl{soil} strength. Finally, we \hl{tested} the effects of adding the green liquor sludge and ash on soil compaction. \hl{We used} two binders: Portland cement and slag. \hl{In the experiment we used the two technical workflow phases: the Phase 1 and the Phase 2. We used three levels of binder quantity in $kg/m^3$ of soil that differed in each phase: 150 kg and 120 kg in Phase 1 and 100 in Phase 2.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+
+\section{Methodology}
+This section describes the type, properties and the origin of the soil material used in this study, as well as methods used to perform experiments. The evaluation of the soil properties was based on considering various criteria which include regional \hl{soil }type, amount and ratio of binders used for treatment of dredged samples, and the ISO standard requirements for workflow used from the existing standards. Soil samples were treated by different ratio of the stabilising agents and water and tested for physical and mechanical properties. Evaluating soil properties aimed to assess its bearing capacity for planned engineering construction works.
+
+A series of the \hl{tests} was performed on the three soil mixes treated by varied binder ratios of \hl{cement}/slag, aimed to determine soil compaction by Proctor characteristics, \hl{UCS} and \hl{permeability}. The \hl{methodology} included the factorial experiment \hl{which} was used for each admixture to evaluate the effects of the changed water ratio and the amount of binder as variables. \hl{The} velocities of the ultrasonic P-waves were measured using existing\hl{ }methods \cite{Lindh202102} to determine soil strength. The techniques were adopted from the \hl{standard} guidance determining the workflow for testing soil\hl{. }This included devices, curing time, workflow, type and amount of binder \hl{used} as stabilising agents for soil\hl{. }The methodology included a series of experiments performed \hl{ }in the \hl{laboratory of the }SGI, Gothenburg, \hl{including processing, curing, testing and stabilization}. The workflow followed the guidance documented by the Swedish Institute for Standards (SIS) \cite{SIS2017,SIS2018,SIS2019}. 
+
+\hl{The samples firstly were compacted and evaluated by Proctor test and then tested for permeability. Testing soil} permeability \hl{aimed to estimate possible danger of soil swelling caused by} the effective stress in a non-stabilised soil. For example, swelling of roads is caused by permeability of soil and excess of water which depends on \hl{the }environmental and climate\hl{ }setting. \hl{The }soil permeability was \hl{measured} in the laboratory using\hl{ SIS}methodology \cite{SIS2019}. The workflow included a series of tests \hl{made using} pressure permeate method (SGI standard, edition 15).
+
+\subsection{Materials}
+
+Soil samples were dredged from the site prepared for construction works on behalf of the SCA Biorefinery Östrand AB. \hl{The samples are presented by the boreal clayey silt soils collected in the coastal area of the Baltic Sea, Sweden}. The \hl{study} area is located in the coastal region of Timrå municipality, Bothnian Bay, Figure \ref{fig:01}. The sampling has been performed on various sites, \hl{Nr.} A1--A8, B1--B24. \hl{The} sieve analysis was used to \hl{determine grain size distribution}. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Fig_04}
+  \caption{The grain distribution diagram for aggregated sample collected from the site B6b. The laboratory tests of soil sieve analysis and curve plotting were performed at the SGI by Per Lindh.}
+  \label{fig:04}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Fig_05}
+  \caption{Photo showing dried material after washing sieving. Note the amount of fiber at the top of the image. Photo by Per Lindh.}
+  \label{fig:05}
+\end{figure}
+
+\hl{The grain distribution analysis }was performed on the aggregated dredged samples \hl{to }determine ratio (\%) of \hl{size} of soil grains\hl{in} soil samples \hl{and to predict soil behaviour based on the morphology and size of the soil granules}. \hl{The} curvature of the soil grain distribution reflecting particle size analysis \hl{was} used to classify soil types. 
+A \hl{large} proportion of fibre was also presented in the samples, \hl{Figure} \ref{fig:05}. The results of test are shown in Figure \ref{fig:04} which graphically visualises grain size distribution curve for a selected specimen using random soil sample. The \hl{sample} volume \hl{was} 3,212 g. 
+\hl{The results of the sieve analysis show that the} dominating type \hl{of} samples \hl{was }fine-grained silt, followed by a fraction of coarse \hl{sand and} gravel, Figure \ref{fig:04}. The sifted test amount included 586,6 g of the material samples with size of $<20.0$ mm, that is, a fine-grained silt. The largest grain size was detected as 8 mm of size, Figure \ref{fig:04}. The basic mineral formatting element in a tested material is Silicon (Si). The grain density was $2.70t/m^3$. The clay content in percentage of the tested soil material $<0.06$ mm was 7.6 \%. 
+
+\hl{Two types of binders were used as stabilising agents: Portland cement (type Basement CEM II / A-V, SS EN 197-1) and ground granulated blast furnace slag (GGBFS). The cement is of composite type with mixtures of Portland cement, slag and Pozzolana. It is a Portland-fly ash cement with proportions of mixture of clinker between 80-94\%, siliceous fly ash in between 6-20\%, and minor additional constituents between 0-5\%. The slag Bremen, or GGBFS, is a mineral additive material (type II) with latent hydraulic properties, used as a binder according to the standard SS 137003} \cite{BSI}. \hl{The slag Bremen comes from iron production in Germany from where it derived its name, and is a quality-assured and CE-marked additive material that meets the requirements of SS EN 151671 and 151672 standards. The slag Bremen has a compact density of $2900 kg/m^3$, which can be compared with cement which has a density about $3100 kg/m^3$, and a bulk density is ca. $1150 kg/m^3$ (cement is ca. $1250 kg/m^3$)} \cite{ThomasCement}. 
+
+\subsection{Sampling process}
+\hl{The sampling method has taken as input a set of the bottom sediments which were collected using the bucket with size of about $1 m^3$. The main steps of sampling are as follows: soil was dredged in the sampling points by one scoop per point. We placed soil sediments from each test point into the separate containers, in order to localise the samples. The representative sediments were kept below the water level to maintain natural conditions of the marine sediments. We extracted a set of soil samples from each soil container and sent to the SGI for further processing and tests which included measuring compaction, performing Proctor test, evaluating compressive strength ratio, permeability and sieve analysis of soil. The soil sample were homogenised in each corresponding container by mixer during five minutes to achieve the representative samples. Afterwards, binder mixed with soil samples in different proportions and water ratio. The stabilized soil samples were then filled into plastic containers by filling fifteen sampling sleeves. The specimens were stabilized in varied recipes and kept in the containers with closed lids.}
+
+\subsection{Phase 1}
+The stabilisation of soil adopted existing general procedure requirements developed by SIS \cite{SIS2018}. To optimise the workflow, a special methodology was used based on the statistical experimental planning\hl{. }The experimental trials of the soil mixture \hl{were} used to find the optimal ratio of water and \hl{binder. We used} Portland \hl{cement} and GGBFS \hl{as stabilising} agents of soil in mixes in three \hl{varied} proportions in the following ratios: 70/30\%, 50/50\%, and 30/70\% of \hl{cement} and \hl{slag.} 
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{Fig_02a}
+    \caption{}
+    \label{fig:02a}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{Fig_02b}
+    \caption{}
+    \label{fig:02b}
+  \end{subfigure}
+  \caption{(a) Binder combinations of Portland \hl{cement} and slag (GGBFS); (b) \hl{Factorial experiment with water ratio and amount of binder as variables.}}
+  \label{fig:02}
+\end{figure}
+
+The mixes contained silt, followed by insignificant amount of sand and gravel\hl{. }Following \hl{the} preprocessing and \hl{curing} of \hl{samples}, we tested strength (UCS), compactness (Proctor modified compaction test) and permeability of \hl{soil}. Three different binder combinations \hl{and ratio between binder and water content} were evaluated\hl{, }Figure \ref{fig:02}. In addition, the effect of varied water ratio was tested\hl{ }with different quantities of the stabilising agents (cement and slag) \hl{in} Phase 1\hl{.} The samples \hl{included} mixes of \hl{cement and slag with} appropriate proportions \hl{at }120 and 150 kg of binder volume per $m^3$ of the dredged silt. The workflow included simultaneous evaluation of soil mixes that consisted of the dredged masses of silt. Tested samples consisted of various binder proportions and water ratio which provided information on soil properties that can be used to control the \emph{in-situ} earthwork process in the field.  A graph in Figure \ref{fig:02a} shows the three tested binder combinations of Portland \hl{cement} and slag (GGBFS). The cement tested was Bascement and the slag was Bremen slag. The graph in Figure \ref{fig:02b} shows a factorial experiment with water ratio and amount of binder as variables. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{Fig_03}
+  \caption{Graph showing the setup of Phase 1 and 2 of the experiment. Here Phase 1 is indicated by the blue dots, Phase 2 -- by the red dots. Blue circles show where Phases 1 and 2 overlap. High and low water ratios in these experiments consisted of 190\%, respectively 139\% (that is, excess of water). High, low and extra low amount of binder consisted of 150, 120 and $100 kg/m^3$.} 
+  \label{fig:03}
+\end{figure}
+
+High and low water ratios in these tests consisted of 190 or 139\% (that is, excess of water), while high and low amount of binder consisted of 150 and $120 kg/m^3$ \hl{of binder per $m^3$ of the silt mass, respectively}. The combination of the high water ratio ($H_W$) and low amount of binder ($L_B$) constitutes a “worst case scenario” as the material risks having a higher permeability and lower technical strength. The scenario will \hl{be} referred to as "high water -- low binder" ($H_WL_B$). The opposite case, "low water content - high amount of binder", gives 'the best case', i.e.\hl{,} a material with low permeability and high technical strength. This combination is further referred \hl{to as }($L_WH_B$). Figure \ref{fig:03} shows the best and worst \hl{ratios} marked in a matrix based on \hl{factor} experiments\hl{, i.e.,} two variables tested at two levels mentioned as "high" and "low")\hl{.}
+
+\subsection{Phase 2}
+
+\hl{Upon} the trial testing and evaluation of soil mixtures in Phase 1, \hl{suitable} recipes \hl{were selected} in Phase 2. \hl{The} additional amount of binder was added to soil samples in Phase 2: 100 kg of binder per $m^3$ of \hl{soil}. Compared with the experimental setup \hl{in Phase} 1, the minimum amount of binder \hl{was} reduced to $100 kg/m^3$\hl{. }The reduction was based on the \hl{existing technical} requirements \hl{on} strength and permeability of the stabilised soil\hl{.} The goal of the Phase 2 was to optimise the cost of the recipe without losing technical / environmental quality of soil. \hl{The} optimisation of the recipe also contributed to the decline in \hl{$CO_2$} emissions during the industrial works\hl{.} The performed test combinations \hl{are} presented in Figure \ref{fig:03} \hl{which} shows the experimental setups of Phase 1 and 2. Here \hl{the} Phase 1 is indicated by the blue dots and \hl{the} Phase 2 -- by the red dots, respectively. \hl{High} and low water ratio in \hl{tests} consisted of 190\% and 139\% (excess). High, low and extra low amount of binder consisted of 150 kg and 120 kg for $100 kg/m^3$. Compared \hl{to} the Phase 1, the minimum amount of binder was reduced to $100 kg/m^3$ of the dredged material. 
+
+\subsection{Phase 3}
+
+\hl{The} Phase 3 refers to the scaled-up experiment. This part of the experiment included adding 150 kg of binder to the tested soil mass. Notable results from the Phase 3 include the highest values of the velocities if P-waves which indicated high strength. This is caused by the maximal amount of binder used in this part of the experiment, which contributed to the overall increase of strength of \hl{soil}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+\section{Results and Discussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Proctor compaction test}
+The Proctor compaction test was performed on \hl{soil samples using an addition of} mixture of ash and green liquor sludge \hl{from the SCA's plant}. \hl{The aim was} to determine the optimal moisture content at which soil becomes the most dense and reaches a maximal dry density. The Proctor test was \hl{applied} in a modified approach\hl{ which enables} to evaluate the compaction of soil after stabilisation and changed content of structure within the soil mass. The mutual ratio was 50/50\% \hl{ }calculated on the dry material. The Proctor tests were performed according to the standard SS027109 (Laboratoriepackning (Proctor) per packat prov, SS027109). The optimal water ratio was recorded as about 39\% at which level it was possible to achieve the best compaction of soil, \emph{i.e.}\hl{,} the highest dry density (Figure \ref{fig:08}). The maximal dry density at 1,12 $g/cm^3$ was achieved by 38.75 \% of water in a binder. The obtained data were statistically processed and tested using the Least Square method, Singular Value Decomposition (SVD) algorithm. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Fig_08}
+  \caption{Results of the Proctor compaction tests of green liquor sludge and ash. $W_{opt} \sim 39\%$.}
+  \label{fig:08}
+\end{figure}
+
+The results of the test are presented in Figure \ref{fig:08} (Proctor compaction test) showing correlation of soil compaction \hl{through the the dry density of soil and} water content in a binder. \hl{Thus, there is } \hl{a correlation between the soil} composition, \hl{the degree of} carbonation of the ash and the water ratio of the green liquor sludge. Changes in the maximal dry density depending on water content in a binder indicated that wetness of soil processed by the green liquor sludge and ash could be used to predict variation of soil compactness with changed ratio of water in the diapasons between 30\%-65\% (Figure \ref{fig:08}). The maximal peak of the dry density of soil was achieved by water content of 38-39\% in the soil mass. After that, the soil dry density decreased exponentially along with the increase of water content in the soil sample until 65\% (\emph{i.e.}, a maximally measured value). The results of the Proctor tests demonstrated that dry density is sensitive to the changes in soil wetness.
+
+\subsection{Soil permeability}
+ \hl{The evaluation} of permeability included \hl{the} calculation of the \hl{permeability coefficient in} treated\hl{ }samples, \hl{compared for each case of} various \hl{ratios of} binder and water, Table \ref{tab:1}. In general, within each group of tested soil samples, the permeability decreases along with the increasing amount of added \hl{cement}, \hl{Figure} \ref{fig:06}. This is explained through the bonding of the soil particles together and water proofing by the binding agents. Thus, adding binders to soil improves its strength and increases resistance to softening by water. The test has been performed using \hl{a} double sampling method where \hl{data }distribution within each group demonstrates a decrease along with the increasing amount of\hl{ }binder: \hl{cement} and \hl{slag.} 
+
+\begin{table}[htbp]
+  \caption{Coefficient of permeability \emph{K} tested in SGI laboratory during Phase 2 of the experiment}
+  \label{tab:1}
+  \centering
+  \begin{tabular}{| l | r | r | r |}
+    \hline
+    \multicolumn{1}{|c|}{Nr.} &
+    \multicolumn{1}{|c|}{Water ratio, \%} &
+    \multicolumn{1}{|c|}{Binder ($kg/m^3$)} &
+    \multicolumn{1}{|c|}{Permeability, \emph{K} (m/s)} \\\hline
+    1 & 140 & 100 & 1,9 $E^{-8}$ \\
+    2 & 140 & 120 & 3,2 $E^{-8}$ \\
+    3 & 190 & 100 & 8,7 $E^{-8}$ \\
+    4 & 190 & 120 & 1,4 $E^{-8}$ \\
+    5 & 140 & 100 & 3,7 $E^{-8}$ \\
+    6 & 140 & 120 & 1,4 $E^{-8}$ \\
+    7 & 190 & 100 & 9,2 $E^{-8}$ \\
+    8 & 190 & 120 & 1,1 $E^{-8}$ \\\hline
+  \end{tabular}
+\end{table}
+
+The specimens tested for permeability in Phase 1 were considered for the worst-case scenario, \emph{i.e.}, only samples from the $H_WL_B$ series ratio, \emph{i.e.}, 'high water / low binder'. Despite this, the results showed 'low to very low' degrees of permeability, see Figure \ref{fig:07}. As a result of testing, samples with an increased slag content gave a denser material. \hl{The }eight permeability tests were performed in total in the laboratory during the Phase 2 of the experiment. The \hl{optimal} recipe consisted of 30\% \hl{cement} and 70\% \hl{slag} at the two different amounts of binder and water quotas \hl{which enabled to achieve the quality requirement of $10^{-8} m/s$, that is,} low water and low binder\hl{ }ratio (sample 1, $L_WL_B$), high water and high binder \hl{ratio} (sample 4, $H_WH_B$) and low/high water\hl{ }and high binder \hl{ratio}\hl{ }(samples 6 and 8: $L_WH_B$ and $H_WH_B$), respectively. The results are shown in Table \ref{tab:1}. 
+
+The response area from the analysis is reported in Figure \ref{fig:06} (permeability of $H_WL_B$ with \hl{changed} cement/slag ratios and permeability duplicate tests for all samples\hl{)}. In the yellow-red areas, a significant interaction is shown between the change in the amount of binder and water ratio. The correlation results in a sharp deterioration in \hl{soil} quality through \hl{the} increased permeability from\hl{ }$10^{-7} m/s$ to $10^{-8} m/s$. Strong interaction demonstrates the importance of working with finely adjusted recipe optimisation at the laboratory level during soil testing. 
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{Fig_06a}
+    \caption{Permeability of $H_WL_B$ with cement/slag ratio: 70/30\%, 50/50\%, 30/70\%}
+    \label{fig:06a}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{Fig_06b}
+    \caption{Permeability duplicate tests for the different soil and binder ratios (all samples).}
+    \label{fig:06b}
+  \end{subfigure}
+  \caption{Permeability tests on the stabilised soil with varied stabilising agents in different binder ratios.}
+  \label{fig:06}
+\end{figure}
+
+\hl{Changing} binder ratios \hl{enabled} a better control of the mixing process in the \emph{in-situ} field sampling, so that quality requirements \hl{were} achieved and project uncertainties \hl{were} reduced. A robust recipe of the soil mixture with binders included 120 kg of binder per $m^3$ of the dredged silt \hl{}aimed to provide a sufficiently low permeability level at several different water quotas during the tests. A graph showing the permeability of the $H_WL_B$ with \hl{changed ratio of binders} Portland cement/slag\hl{ is} shown in Figure \ref{fig:06a}. The results \hl{of} the permeability tests show different materials and binder ratios. The duplicate experiments have been performed on all the samples. The \hl{permeability gradually decreased} along with added slag and reduced Portland cement, and vice versa, within each \hl{case of mixture}, \hl{}Figure \ref{fig:06b}. 
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{Fig_07a}
+    \caption{Permeability of $H_WL_B$ with cement/slag ratio 70/30\%, 50/50\%, and 30/70\%}
+    \label{fig:07a}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{Fig_07b}
+    \caption{Permeability duplicate tests for the different soil and binder ratios (all samples).}
+    \label{fig:07b}
+  \end{subfigure}
+  \caption{Permeability tests on the stabilised soil with varied stabilising agents in different binder ratios.}
+  \label{fig:07}
+\end{figure}
+
+\hl{Figure} \ref{fig:07a} shows a 2D response area for the permeability tests. The results show a strong negative interaction between \hl{the} binder content and water ratio. \hl{Figure} \ref{fig:07b} shows a 3D response area for the permeability tests. The results show a strong negative interaction between binder content and water ratio. \hl{Thus, at higher} water ratio and \hl{lower} amount of binder, the permeability increases in 10 times \hl{for both cases, Figure} \ref{fig:07a} and \ref{fig:07b}. All tests are performed as double tests \hl{during Phase 2}. 
+
+\subsection{Compressive strength}
+
+The use of the ultrasonic P-waves in geotechnical tests is a modern non-destructive method aimed to analyse the strength of the stabilised soils. The applicability of this method consists in the relationship between the velocity of P-wave \hl{propagation} and \hl{mechanical, structural and elastic properties} of soil \hl{that largely control the} velocity of P-waves. Solving the inverse problem, measured \hl{P-wave velocity} can indicate the \hl{soil strength}. Besides that, \hl{evaluating P-wave velocity} provide a rapid, robust and reliable approach \hl{as} an alternative to the existing traditional methods \hl{of testing soil strength}. For example, it can be used for detecting early micro damages in \hl{building} materials \cite{Rydenetal2016}. Therefore, we estimated P-wave velocities to evaluate strength of the stabilised soil\hl{.} 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Fig_09}
+  \caption{Uniaxial Compressive Strength (UCS) tests for each mixture}
+  \label{fig:09}
+\end{figure}
+
+The soil specimens had a diameter of ca. 50 mm and a height of ca. 100 mm. The compressive strength of soil was determined according to the ISO/TS 17892-7 standard using technical guidance of SIS \cite{SIS2017}. The deformation rate was about 1\% / min which gives an approximate speed of 1 mm/min of wave propagation through a specimen. The results of the UCS tests are shown in Figure \ref{fig:09}. The shear strength and the P-wave velocity of soil \hl{were} measured using the ISO/TS17892-7 standard and visualised as a function of the UCS. The shear strength of the tested samples was obtained by multiplying the UCS values by 0.5. All the recipes meet the requirements for a minimum compressive strength of 280 kPa, compared with the laboratory tests. The UCS and P-wave velocities were recorded for the \hl{samples} taken from the sites A4 and B4 with 120 and 150 kg of binder per $m^3$ of \hl{soil}. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Fig_10}
+  \caption{Histogram showing P-wave velocity for materials taken from the A4 and B4 sample sites with 120 and 150 kg of binder per $m^3$ of the dredged material.}
+  \label{fig:10}
+\end{figure}
+
+The graphs have been visualised as statistical plots for each mixture in 4 cases \hl{(}Figures 9 and 10). The P-wave velocity has been measured for each case of binder combinations ($H_WL_B, L_WH_B, H_WEL_B, L_WEL_B$), that is, \hl{the} abbreviations stand for "High Water / Low Binder, Low Water / High Binder, High Water / Extra Low Binder, Low Water / Extra Low Binder" (Figure \ref{fig:11}). The highest values of \hl{the} P-waves were recorded in case of Phase 3, where the experiment included 150 kg of binder as an admixture to the soil\hl{ }(red stars in the graph). The lowest values were recorded for the Phase 2 of the experiment, where 100 kg of binders were added. In Phase 1, two levels of binder quantity per $m^3$ of the dredged material were tested: 150 kg and 120 kg: \hl{ }red squares in\hl{ }Figure \ref{fig:11}.
+
+The results of the UCS tests for each mixture are shown in Figure \ref{fig:09}. For material taken from the A4 site (see map with location of test sites in Figure \ref{fig:01}) with a water ratio of about 135\%, an increase in the amount of binder means a doubling in strength. This effect is not visible for the soil material taken from the B4 site (see Figure \ref{fig:01}) where a water ratio was about 69\%. Different amounts of binder are shown in the legend of Figure \ref{fig:09}: 120 and 150 kg for each case, respectively. The variation in the P-wave velocity with changed compression characteristics of the stabilized soils was also evaluated. 
+
+Figure \ref{fig:10} shows the histograms for the P-wave velocity of \hl{soil} specimens collected in \hl{sites} A4 and B4\hl{.} Similar to the results of the UCS tests, this graph shows the empirical data distribution for each case. Scattering increases along with the increasing P-wave velocity. However, the increase in data distribution is in general lower and the overlap between the B4\_120 and B4\_150 is considerably lower. The B4\_120 shows the graph for soil collected from the test site B4 stabilised by 120 kg of binder, while B4\_150 is the same, stabilised by 150 kg of binder\hl{.} 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Fig_11}
+  \caption{The correlation between P-wave velocity and compressive strength of soil for all samples tested at various phases of the experiment and using different binder ratios.}
+  \label{fig:11}
+\end{figure}
+
+Figure \ref{fig:11} shows the results of the measured P-wave velocity in soil\hl{ }as a function of the compressive strength and the admixture of binders in various ratios\hl{. }The compressive strength shows a complex characteristics of the soil largely influenced by the \hl{soil} structure. This includes a variety of parameters, such as voids, pores, imperfections,\hl{ }specific local defects in a given \hl{specimen}. Therefore, a \hl{relationship} between the compressive strength and the velocity of P-waves \hl{is shown} a curve rather than direct straight line. Nevertheless, a higher P-wave velocity is in general associated with a higher compressive strength of soil, \hl{ }Figure \ref{fig:11}. 
+
+As mentioned above, the velocity of P-waves passing through the soil sample generally increases with the increasing compressive strength of this soil specimen. However, a certain difference between the laboratory results and the scaled-up experiments can be seen for each recipe of binder ratios tested during different phases of the experiment. Thus, the Phase 1 was the initial stage of the laboratory experiments, while the Phase 2 is a supplement with a lower binder content, which included the optimisation phase aimed to find a lower limit for the amount of binder. The Phase 3 refers to the scaled-up experiment in this study. 
+
+The results show similar patterns of strength for different phases with various amount of binder added into the soil masses. The difference in variation is also supported by the results received from other previous projects, \emph{e.g.}, Arendal 2, Gothenburg and Kolkajen, Stockholm. A certain displacement can be discerned by comparing these data, \emph{i.e.}, slightly lower strength at the same P-wave velocity for the scaled-up experiment in Phase 3. The results are in general consistent with the expected variation based on the comparable similar geotechnical surveys of soil. 
+
+\hl{The} compressive strength of soil\hl{ correlates with} the stiffness of the \hl{specimens collected from the testing sites A4 and B4 dueing Phases 1, 2 and 3 of the experiment}. It is \hl{ }reflected in variations of the velocity of the P-wave propagation \hl{in} various binder ratios ($H_WL_B, L_WH_B, H_WEL_B, L_WEL_B$). \hl{The} relationship between the P-wave velocity and the compressive strength of soil\hl{ }changed in various combinations of \hl{binders} (Portland cement/GGBFS) and water\hl{ }for each \hl{mixture, as shown} in Figure \ref{fig:11}. The trends observed in the comparison of "P-wave velocity-compressive strength" graphs are pronounced and show the direct correlation between the parameters of P-wave propagation and soil stiffness. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+\label{sec:conclusions}
+
+\hl{The main contribution of this paper is to demonstrate that stabilising soil by various amount of binder as Portland cement and Bremen slag (GGBFS) improves soil parameters through the increased compressive strength, compactness and decreased permeability. To this end,} a series of the \hl{ }tests\hl{ }has been performed\hl{ }to determine physical and mechanical properties of \hl{silts}. The sieve analysis was performed \hl{to evaluate} grain size distribution. The experiments \hl{evaluated compressive strength, compactness and permeability} of soil stabilised by various \hl{ratio} of binder\hl{ }performed according to \hl{ }standards of SIS. The \hl{binder included two types}: Portland \hl{cement} and slag (GGBFS). The amounts of binder/water were changed to find the optimal ratio having the best effect on \hl{stabilisation}. The \hl{modified Proctor compaction tests} aimed to determine \hl{soil }density \hl{by} heavy laboratory compaction. 
+
+\hl{We proposed a} workflow with a mixture trials of binders in various proportions (30/70\%, 50/50\% and 70/30\% of Portland cement/\hl{Bremen} slag). The quality control procedures were evaluated during the\hl{tests} on P-wave velocity\hl{}. The \hl{performance} of the \hl{stabilised soil} shown dependency of the \hl{permeability, compactness and strength} on the \hl{ratio of binders.} The 70\% Portland \hl{cement} and 30\% of GGBS shows the highest permeability ($1.4\mathrm{e}^{-7}$) in the $H_WL_B$ ratio. 50\% Portland cement and 50\% GGBS shows $6.6\mathrm{e}^{-8}$ permeability in the same binder ratio. The lowest permeability is recorded by the ratio of binders 30\% Portland cement and 70\% slag with notably decreasing permeability up to (=$2.2\mathrm{e}^{-10}$).
+
+A comparison of the UCS in soil \hl{stabilised} by various proportions of binder was performed \hl{using P-waves velocity which} proved to be a fast, robust and reliable method for evaluating \hl{ }soil strength. Since measuring the P-wave velocity is a non-destructive approach, it has the advantage \hl{in the} repeatability of \hl{testing, reduced}, number of tests and \hl{optimised} workflow. \hl{Adding binders in various ratios was} flexibly changed to determine the properties \hl{of} the stabilized soil. The \hl{P-wave velocities} were \hl{determined} on \hl{samples of loamy silt} stabilized with mixtures of two agents (\hl{cement/slag}). The compression strength, compactness and permeability \hl{were} determined using the UCS tests, SGI method for testing permeability (edition 15) and modified Proctor compaction test\hl{. Soil} compaction identified using \hl{Proctor} compaction test demonstrated a tight correlation between \hl{water} ratio in the pores of soil and \hl{dry} density of soil. The \hl{variation} in the ultrasonic P-waves velocity and UCS of soil stabilised by binders in various ratios were evaluated\hl{. }The P-waves\hl{ }increased along with the increasing strength\hl{ }over time\hl{. }Higher velocities were recorded for\hl{ }soil stabilised by binder ratio\hl{ }cement/slag as 30/70\%, while lower velocities were obtained for ratio\hl{ }cement/slag as 70/30\%. 
+
+The velocity of the P-waves increased with the increasing strength of soils and time of curing. Specifically, it was more pronounced for the case of soil collected from the B4 testing site where $150 kg/m^3$ of binder was used for samples compared to the test A4 with 120 kg of binder. This demonstrated the direct effects of binder admixture on the overall increase of strength. The transmission of the P-waves occurs along the fastest path in the structure of the soil mass, which is directly related to the strength and stiffness of the stabilised specimen. Hence, stabilised soil with the $H_BL_W$ content demonstrated higher strength and increased velocity of P-waves compared to the samples with the $H_WL_B$  content. \hl{Our results} demonstrated that \hl{admixture} of the stabilising agents (Portland cement and GGBFS) in various \hl{ratios increases} soil strength. The results can be considered in similar studies on silts dredged from the coastal areas. Future research can \hl{include }experiments on changing the binder ratio\hl{ }and develop more criteria \hl{for }the S/S treatment of silts.
+
+%\newpage
+\begin{acknowledgements}
+The \hl{study was a part of the project run on behalf of the Svenska Cellulosa Aktiebolaget} (SCA) Energy Biorefinery \"Ostrand AB. \hl{Implementing the process of soil stabilization and testing soil strength using cement and slag admixtures were performed in the Swedish Geotechnical Institute} (SGI).
+We greatly acknowledge the technical assistance of Annika Åberg. We highly appreciate corrections, suggestions and critical comments from the \hl{three} anonymous reviewers and a general overview of this submission by the Editor-in-Chief Marek Wojtyra.
+\end{acknowledgements}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      LEAVE THE FOLLOWING LINES UNALTERED                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{receiptnote}
+  Manuscript received by Editorial Board, \theamereceived; \\ 
+  final version, \theameaccepted.
+\end{receiptnote}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             REFERENCES                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliographystyle{unsrt}
+%\bibliographystyle{unsrtnat}
+\bibliographystyle{plainnat}
+%\bibliographystyle{apalike}
+%\bibliographystyle{abbrvnat}
+\bibliography{References_AME}
+%\nocite{*}
+
+\end{document}
+% vim: set spell expandtab tabstop=2 shiftwidth=2 syntax=tex ff=unix:
